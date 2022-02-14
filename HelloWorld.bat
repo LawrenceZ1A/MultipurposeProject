@@ -1,0 +1,1 @@
+gcc C\HelloWorld.c -o EXE\HelloWorld
