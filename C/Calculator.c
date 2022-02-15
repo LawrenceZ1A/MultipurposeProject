@@ -82,23 +82,6 @@ void Divide()
 	
 }
 
-void SquareRoot()
-{
-	
-	double input;
-	
-	printf("\nInput your radicand:\n");
-	scanf("%lf", &input);
-	
-	double output = sqrt(input);
-	printf("\nYour output is:\n");
-	printf("%lf", output);
-	printf("\n\n\n");
-	
-	main();
-	
-}
-
 void Power()
 {
 	
@@ -119,6 +102,23 @@ void Power()
 	
 }
 
+void SquareRoot()
+{
+	
+	double input;
+	
+	printf("\nInput your radicand:\n");
+	scanf("%lf", &input);
+	
+	double output = sqrt(input);
+	printf("\nYour output is:\n");
+	printf("%lf", output);
+	printf("\n\n\n");
+	
+	main();
+	
+}
+
 int main()
 {
 	
@@ -131,8 +131,8 @@ int main()
 	printf("S (Subtract)\n");
 	printf("M (Multiply)\n");
 	printf("D (Divide)\n");
-	printf("R (Square Root)\n");
-	printf("P (Power)\n\n");
+	printf("P (Power)\n");
+	printf("R (Square Root)\n\n");
 	
 	while(true)
 	{
@@ -164,18 +164,19 @@ int main()
 			Divide();
 			
 		}
-		else if(input == 'R' || input == 'r')
-		{
-			
-			SquareRoot();
-			
-		}
 		else if(input == 'P' || input == 'p')
 		{
 			
 			Power();
 			
 		}
+		else if(input == 'R' || input == 'r')
+		{
+			
+			SquareRoot();
+			
+		}
+		
 		
 	}
 	
