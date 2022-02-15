@@ -1,10 +1,121 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 
 void Add()
 {
 	
-	printf("I'm adding!");
+	double input1;
+	double input2;
+	
+	printf("\n\nInput your first addend:\n");
+	scanf("%lf", &input1);
+	printf("\nInput your second addend:\n");
+	scanf("%lf", &input2);
+	
+	double output = input1 + input2;
+	printf("\nYour output is:\n");
+	printf("%lf", output);
+	printf("\n\n\n");
+	
+	main();
+	
+}
+
+void Subtract()
+{
+	
+	double input1;
+	double input2;
+	
+	printf("\n\nInput your minuend:\n");
+	scanf("%lf", &input1);
+	printf("\nInput your subtrahend:\n");
+	scanf("%lf", &input2);
+	
+	double output = input1 - input2;
+	printf("\nYour output is:\n");
+	printf("%lf", output);
+	printf("\n\n\n");
+	
+	main();
+	
+}
+
+void Multiply()
+{
+	
+	double input1;
+	double input2;
+	
+	printf("\n\nInput your multiplier:\n");
+	scanf("%lf", &input1);
+	printf("\nInput your multiplicand:\n");
+	scanf("%lf", &input2);
+	
+	double output = input1 * input2;
+	printf("\nYour output is:\n");
+	printf("%lf", output);
+	printf("\n\n\n");
+	
+	main();
+	
+}
+
+void Divide()
+{
+	
+	double input1;
+	double input2;
+	
+	printf("\n\nInput your dividend:\n");
+	scanf("%lf", &input1);
+	printf("\nInput your divisor:\n");
+	scanf("%lf", &input2);
+	
+	double output = input1 / input2;
+	printf("\nYour output is:\n");
+	printf("%lf", output);
+	printf("\n\n\n");
+	
+	main();
+	
+}
+
+void SquareRoot()
+{
+	
+	double input;
+	
+	printf("\nInput your radicand:\n");
+	scanf("%lf", &input);
+	
+	double output = sqrt(input);
+	printf("\nYour output is:\n");
+	printf("%lf", output);
+	printf("\n\n\n");
+	
+	main();
+	
+}
+
+void Power()
+{
+	
+	double input1;
+	double input2;
+	
+	printf("\n\nInput your base:\n");
+	scanf("%lf", &input1);
+	printf("\nInput your exponent:\n");
+	scanf("%lf", &input2);
+	
+	double output = pow(input1, input2);
+	printf("\nYour output is:\n");
+	printf("%lf", output);
+	printf("\n\n\n");
+	
+	main();
 	
 }
 
@@ -20,21 +131,51 @@ int main()
 	printf("S (Subtract)\n");
 	printf("M (Multiply)\n");
 	printf("D (Divide)\n");
-	printf("R (Root)\n");
+	printf("R (Square Root)\n");
 	printf("P (Power)\n\n");
 	
 	while(true)
 	{
 		
-		if(getchar() == 'A')
+		char input;
+		scanf("%c", &input);
 		
+		if(input == 'A' || input == 'a')
+		{
 			
 			Add();
-			return 0;
 			
 		}
-		
-		printf("true\n");
+		else if(input == 'S' || input == 's')
+		{
+			
+			Subtract();
+			
+		}
+		else if(input == 'M' || input == 'm')
+		{
+			
+			Multiply();
+			
+		}
+		else if(input == 'D' || input == 'd')
+		{
+			
+			Divide();
+			
+		}
+		else if(input == 'R' || input == 'r')
+		{
+			
+			SquareRoot();
+			
+		}
+		else if(input == 'P' || input == 'p')
+		{
+			
+			Power();
+			
+		}
 		
 	}
 	
