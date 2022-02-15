@@ -1,2 +1,1 @@
-# MultipurposeProject
- Assembly (x86), Python, Go
+hey guys look `gpdi.exe` is a DeadPig interpreter I made 'cuz y not
