@@ -14,7 +14,7 @@ void Add()
 	scanf("%lf", &input2);
 	
 	double output = input1 + input2;
-	printf("\nYour output is:\n");
+	printf("\nYour sum is:\n");
 	printf("%lf", output);
 	printf("\n\n\n");
 	
@@ -34,7 +34,7 @@ void Subtract()
 	scanf("%lf", &input2);
 	
 	double output = input1 - input2;
-	printf("\nYour output is:\n");
+	printf("\nYour difference is:\n");
 	printf("%lf", output);
 	printf("\n\n\n");
 	
@@ -54,7 +54,7 @@ void Multiply()
 	scanf("%lf", &input2);
 	
 	double output = input1 * input2;
-	printf("\nYour output is:\n");
+	printf("\nYour product is:\n");
 	printf("%lf", output);
 	printf("\n\n\n");
 	
@@ -74,7 +74,7 @@ void Divide()
 	scanf("%lf", &input2);
 	
 	double output = input1 / input2;
-	printf("\nYour output is:\n");
+	printf("\nYour quotient is:\n");
 	printf("%lf", output);
 	printf("\n\n\n");
 	
@@ -82,7 +82,7 @@ void Divide()
 	
 }
 
-void Power()
+void Exponentiate()
 {
 	
 	double input1;
@@ -94,7 +94,7 @@ void Power()
 	scanf("%lf", &input2);
 	
 	double output = pow(input1, input2);
-	printf("\nYour output is:\n");
+	printf("\nYour power is:\n");
 	printf("%lf", output);
 	printf("\n\n\n");
 	
@@ -102,16 +102,19 @@ void Power()
 	
 }
 
-void SquareRoot()
+void Root()
 {
 	
-	double input;
+	double input1;
+	double input2;
 	
+	printf("\nInput your degree:\n");
+	scanf("%lf", &input1);
 	printf("\nInput your radicand:\n");
-	scanf("%lf", &input);
+	scanf("%lf", &input2);
 	
-	double output = sqrt(input);
-	printf("\nYour output is:\n");
+	double output = pow(input2, 1 / input1);
+	printf("\nYour root is:\n");
 	printf("%lf", output);
 	printf("\n\n\n");
 	
@@ -131,8 +134,8 @@ int main()
 	printf("S (Subtract)\n");
 	printf("M (Multiply)\n");
 	printf("D (Divide)\n");
-	printf("P (Power)\n");
-	printf("R (Square Root)\n\n");
+	printf("E (Exponentiate)\n");
+	printf("R (Root)\n\n");
 	
 	while(true)
 	{
@@ -164,16 +167,16 @@ int main()
 			Divide();
 			
 		}
-		else if(input == 'P' || input == 'p')
+		else if(input == 'E' || input == 'e')
 		{
 			
-			Power();
+			Exponentiate();
 			
 		}
 		else if(input == 'R' || input == 'r')
 		{
 			
-			SquareRoot();
+			Root();
 			
 		}
 		
