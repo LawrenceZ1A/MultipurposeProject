@@ -1,0 +1,55 @@
+{
+	"The Great Cuboid approaches! What will you do?": null,
+	"Stab Cuboid": {
+		"Cuboid gets angry at you and throws your knife back at you.": null,
+		"Dodge the knife": [
+			"You fail to dodge the knife and die in pain.`FAILED DODGE ENDING"
+		],
+		"Scream like a little girl": [
+			"You scream so loudly that the knife gets deflected. The Great Cuboid is so angry that he explodes.`SCREAMING ENDING"
+		],
+		"Try to slash the knife out of the air with your other knife": {
+			"You Try to slash the knife out of the air but you miss and now you don't have hands.": null,
+			"panik": [
+				"panik`PANIK ENDING"
+			],
+			"Psychologically bully The Cuboid": [
+				"The Great Cuboid gets sad and calls in the Cosmic Teacher, who kills you to death.`BULLY ENDING"
+			],
+			"Do a pushup": {
+				"You try to do a pushup, but then you remember that you don't have hands. Now you have an infection.": null,
+				"Yell at The Cuboid": {
+					"The Cuboid gets angry at you.": null,
+					"Be pretend sorry": [
+						"The Cuboid sees through you. He stomps you into a puddle.`PUDDLE ENDING"
+					],
+					"Be real sorry": [
+						"The Cuboid feels better, and you become friends.`FRIEND ENDING"
+					],
+					"Yell some more": {
+						"The Cuboid gets EVEN MORE ANGRY!!!!!!!!!!!!!!!": null,
+						"Yell some more again": [
+							"The Cuboid gets so angry that he expands and expands and turns into a black hole and eats the universe.`ANGERY ENDING"
+						],
+						"Say sorry": [
+							"NO U! U DUM! The Cuboid punches you.`OUCH ENDING"
+						],
+						"Eat him": [
+							"You eat him. He tastes very good. Then you get indigestion and die.`CONSTIPATION ENDING"
+						]
+					}
+				},
+				"Lie down and cry": [
+					"You get so sad that you commit suicide.`SEVERE DEPRESSION ENDING"
+				],
+				"Induce amnesia": [
+					"You give yourself amnesia and forget how to breathe.`LOL UR DUMB ENDING"
+				]
+			}
+		}
+	},
+	"Eat a pizza": "",
+	"Fart a silent but deadly": "",
+	"Roll over and play dead": ""
+	"Cute puppy dog face ftw": ""
+}
