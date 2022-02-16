@@ -9,7 +9,7 @@
 			"You scream so loudly that the knife gets deflected. The Great Cuboid is so angry that he explodes.`SCREAMING ENDING"
 		],
 		"Try to slash the knife out of the air with your other knife": {
-			"You Try to slash the knife out of the air but you miss and now you don't have hands.": null,
+			"You try to slash the knife out of the air but you miss and now you don't have hands.": null,
 			"panik": [
 				"panik`PANIK ENDING"
 			],
@@ -95,7 +95,7 @@
 				"you commit die. the die spreads and everyone commits die. the universe no longer exis-`DIE ENDI-"
 			]
 		},
-		"Projectile Vomit": [
+		"Projectile vomit": [
 			"You vomit so hard that you fly out of his grasp and land in the ground. You somehow survive.`VOMIT ENDING"
 		]
 	},
