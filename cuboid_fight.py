@@ -9,6 +9,7 @@ except (ModuleNotFoundError, ImportError):
         import json
         
 from tkinter import *
+from getpass import getuser
         
 with open("game.json", "r") as f:
     data = json.load(f)
@@ -44,18 +45,34 @@ def selecta(i):
     var.set(i)
     var2 = i
     
+def reset(*args, **kwargs):
+    global cdata, cldata, data, ldata
+    print(data)
+    cdata, cldata = data, ldata
+    
 def button(texts, tbox):
     global master
     
     select = []
     for text in texts:
-        temp = Button(
-            master,
-            text=str(text),
-            command=lambda i=text: selecta(
-                i
+        if (text != "Reset"):
+            temp = Button(
+                master,
+                text=str(text),
+                command=lambda i=text: selecta(
+                    i
+                )
             )
-        )
+            
+        else:
+            temp = Button(
+                master,
+                text=str(text),
+                command=lambda i=text: reset(
+                    i
+                )
+            )
+            
         temp.pack()
         select.append(temp)
         
@@ -69,13 +86,20 @@ def button(texts, tbox):
     return var2
 
 while True:
+    cldata[0] = cldata[0].replace("%(name)s", getuser().title())
     tbox = textbox(cldata[0])
-    temp = button(cldata[1:], tbox)
-    cdata = cdata[temp]
-    cldata = list(cdata)
+    temp = button(cldata[1:] + ["Reset"], tbox)
+    
+    if temp != "Reset":
+        cdata = cdata[temp]
+        cldata = list(cdata)
+        
+    print(cdata)
     
     if cdata == cldata:
         textbox("`".join(cldata[0].split("`")[:~0]))
         textbox(cldata[0].split("`")[~0])
         
         break
+
+master.mainloop()
