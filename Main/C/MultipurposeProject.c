@@ -25,7 +25,7 @@ int main()
 		{
 			
 			printf("\n\n");
-			(void)system("C:/MultipurposeProject/LawrenceZ1A/EXE/C-Calculator.exe");
+			(void)system("C:/MultipurposeProject/C-Calculator/EXE/C-Calculator.exe");
 			return(0);
 			
 		}
