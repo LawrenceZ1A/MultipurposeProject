@@ -37,7 +37,10 @@
 						"Eat him": [
 							"You eat him. He tastes very good. Then you get indigestion and die.`CONSTIPATION ENDING"
 						]
-					}
+					},
+					"?????": [
+						"The Cuboid looks up. What happened, %(name)s? How did he know your name?`SCARY FOURTH WALL ENDING"
+					]
 				},
 				"Lie down and cry": [
 					"You get so sad that you commit suicide.`SEVERE DEPRESSION ENDING"
