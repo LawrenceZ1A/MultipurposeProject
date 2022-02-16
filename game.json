@@ -48,8 +48,36 @@
 			}
 		}
 	},
-	"Eat a pizza": "",
-	"Fart a silent but deadly": "",
-	"Roll over and play dead": ""
+	"Eat a pizza": {
+		"The Cuboid is sad because he wanted that pizza.": null,
+		"Eat another pizza": [
+			"The Cuboid gets so sad that he keels over and dies.`PIZZA-INDUCED DEPRESSION ENDING"
+		],
+		"Apologize and give the Cuboid your other pizza.": [
+			"Cuboid accepts the pizza and you become best friends.`BFF ENDING"
+		],
+		"Glare at him": {
+			"You glare at The Great Cuboid so hard that his head falls off.": null,
+			"Stick up your middle finger": [
+				"The Cuboid tries to roar, but then he remembers that he doesn't have a mouth. He flails, and knocks you over and you impale yourself on your middle finger.`DEATH-BY-FINGER ENDING"
+			],
+			"Run Away": {
+				"You run away, and then bump into The Great Enoch, The Great Felix, and The Great Lawrence.": null,
+				"Run back to The Headless Cuboid": [
+					"The giants chase you, and discover The Headless Cuboid. They then take turns biting your head off.`ANGERED GIANTS ENDING"
+				],
+				"Throw a temper tantrum": {
+					"The giants try to stomp you, but then they realize you have plot armour from being the protaganist of this game.`PLOT ARMOUR ENDING"
+				}
+			},
+			"Ascend to heaven": [
+				"You ascend to heaven, but God denies you and you die of bubonic plague for no good reason at all.`FAILED HEAVEN ENDING"
+			]
+		}
+	},
+	"Fart a silent but deadly": [
+		"Oops, too deadly. You fart out Chlorine Trifluoride and the Earth explodes in a giant fireball.`LETHAL FART ENDING"
+	],
+	"Roll over and play dead": "",
 	"Cute puppy dog face ftw": ""
 }
