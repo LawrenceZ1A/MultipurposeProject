@@ -29,6 +29,13 @@ int main()
 			return(0);
 			
 		}
+		else if(input == 'F' || input == 'f')
+		{
+			
+			(void)system("C:/MultipurposeProject/run.bat");
+			exit(0);
+			
+		}
 		
 	}
 	
