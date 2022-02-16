@@ -46,8 +46,9 @@ def selecta(i):
     var2 = i
     
 def reset(*args, **kwargs):
-    global cdata, cldata, data, ldata
-    print(data)
+    global cdata, cldata, data, ldata, var, var2
+    var.set("a")
+    var2 = "Reset"
     cdata, cldata = data, ldata
     
 def button(texts, tbox):
@@ -85,21 +86,25 @@ def button(texts, tbox):
     
     return var2
 
+class EndDummy:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    
+    def destroy(self):
+        self.a.destroy()
+        self.b.destroy()
+
 while True:
     cldata[0] = cldata[0].replace("%(name)s", getuser().title())
     tbox = textbox(cldata[0])
     temp = button(cldata[1:] + ["Reset"], tbox)
     
-    if temp != "Reset":
+    if str(temp) != "Reset":
         cdata = cdata[temp]
         cldata = list(cdata)
         
-    print(cdata)
-    
     if cdata == cldata:
-        textbox("`".join(cldata[0].split("`")[:~0]))
-        textbox(cldata[0].split("`")[~0])
-        
-        break
-
-master.mainloop()
+        enda = textbox("`".join(cldata[0].split("`")[:~0]))
+        endb = textbox(cldata[0].split("`")[~0])
+        temp = button(["Reset"], EndDummy(enda, endb))
