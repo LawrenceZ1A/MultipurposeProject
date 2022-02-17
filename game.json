@@ -75,7 +75,7 @@
 			]
 		},
 		"Detonate": {
-			"You attempt to explode, but fail. The Cuboid looks at you confusdedly.": null,
+			"You attempt to explode, but fail. The Cuboid looks at you confusededly.": null,
 			"Attempt to detonate again": [
 				"You detonated so hard that you broke the game, %(name)s. Very rude.`CmDmxoYTqbzfsJIsixGRueLEGpRsmrMzJoNCHdnDHPTVjqmaLcNAOpjssYxMimoijKBGK"
 			],
@@ -161,5 +161,26 @@
 	},
 	"Cute puppy dog face ftw": [
 		"The Great Cuboid thinks you are very cute. Cuboid takes you to his lair and you spend the rest of your life getting petted by a giant.`PET ENDING"
-	]
+	],
+	"Force Cuboid to turn into a baby": {
+		"GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA! GOO GOO GA GA!": null,
+		"Swallow the baby": [
+			"The Cosmic Babysitter show up and kicks your butt so hard that it falls off.`BABY-EATER ENDING"
+		],
+		"Call on the power of Satan": [
+			"You call on the power of Satan, and his power overruns you and consumes you. You turn into a ball of black magic.`BLACK MAGIC ENDING"
+		],
+		"Aimlessly stare at the nearest tree.": {
+			"You stare at the tree so hard that it grows. Now the world is a tree.": null,
+			"Light it on fire": [
+				"The world lights on fire and vaporizes into a ball of ash.`THE WORLD IS ON FIRE ENDING"
+			],
+			"Do nothing": [
+				"A giant squirrel crawls over and claws you to pieces. You die in pain.`MUTANT SQUIRREL ENDING"
+			],
+			"Wait": [
+				"The Square-Cube Law comes in to effect and the tree dies. You break the walls and escape.`TREE ESCAPEE ENDING"
+			]
+		}
+	}
 }
