@@ -104,30 +104,5 @@
 	},
 	"Cute puppy dog face ftw": [
 		"The Great Cuboid thinks you are very cute. Cuboid takes you to his lair and you spend the rest of your life getting petted by a giant.`PET ENDING"
-	],
-	"Get Support From Lawrence": {
-		"He asks you what you want him to do" :  null,
-		"Ask Him To lecture The Great Cuboid": [
-			"Lawrence lectures The Great Cuboid to death.'LECTURE-TO-DEATH ENDING"
-		],
-		"Ask him to play KSP and yell at The Great Cuboid": {
-
-			"Lawrence whips out his desktop from his man-pouch and opens KSP, The Great Cuboid is now addicted": {
-				"Kill The Great Cuboid while he is distracted": [
-					"You kill him and instead you hit the desktop, The Cuboid is VERY ANGERY and kills you. 'BROKEN-KSP ENDING"
-				]
-			}
-		},
-		"Ask him to commit suicide": {
-			"Lawrence is hesitant to do that": null,
-			"Go and Help him to do that": [
-				"You kill lawrence and his soul comes from heaven and spanks you. 'SPANKING ENDING"
-			]
-		},
-		"Ask him to become best friends": [
-			"They become best friends and while The Great Cuboid is killing you, Lawrence is lecturing about torture techneqies. 'TORTURE-LECTURE ENDING"
-		]
-	}
-		
-	
+	]
 }
