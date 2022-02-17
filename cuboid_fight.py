@@ -1,3 +1,4 @@
+#Imports
 try:
     import ujson as json
     
@@ -10,22 +11,26 @@ except (ModuleNotFoundError, ImportError):
         
 from tkinter import *
 from getpass import getuser
-        
+    
+#Loading game
 with open("game.json", "r") as f:
     data = json.load(f)
     ldata = list(data)
-    
+
+#Creating window
 master = Tk()
 master["background"] = "#01FEAA"
 master.geometry("720x480")
 master.title("Fighting Cuboid")
 master.resizable(False, False)
 
+#Creating variables and stuff
 cdata, cldata = data, ldata
 var = StringVar()
 var2 = ""
 
 def textbox(text):
+    """Textbox function"""
     tdis = Text(
         master,
         width=700,
@@ -41,17 +46,20 @@ def textbox(text):
     return tdis
 
 def selecta(i):
+    """Called when buttons are pressed to return value"""
     global var, var2
     var.set(i)
     var2 = i
     
 def reset(*args, **kwargs):
+    """Reset game"""
     global cdata, cldata, data, ldata, var, var2
     var.set("a")
     var2 = "Reset"
     cdata, cldata = data, ldata
     
 def button(texts, tbox):
+    """Put button"""
     global master
     
     select = []
@@ -87,24 +95,28 @@ def button(texts, tbox):
     return var2
 
 class EndDummy:
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
+    """Dummy class for end reset"""
+    def __init__(self, *args):
+        self.thing = args
     
     def destroy(self):
-        self.a.destroy()
-        self.b.destroy()
+        for item in self.thing:
+            item.destroy()
 
+#Mainloop
 while True:
+    #Filters
     cldata[0] = cldata[0].replace("%(name)s", getuser().title())
+    
+    if cdata == cldata:
+        #If at ending
+        enda = textbox("`".join(cldata[0].split("`")[:~0]))
+        endb = textbox(cldata[0].split("`")[~0])
+        temp = button(["Reset"], EndDummy(enda, endb))
+        
     tbox = textbox(cldata[0])
     temp = button(cldata[1:] + ["Reset"], tbox)
     
     if str(temp) != "Reset":
         cdata = cdata[temp]
         cldata = list(cdata)
-        
-    if cdata == cldata:
-        enda = textbox("`".join(cldata[0].split("`")[:~0]))
-        endb = textbox(cldata[0].split("`")[~0])
-        temp = button(["Reset"], EndDummy(enda, endb))

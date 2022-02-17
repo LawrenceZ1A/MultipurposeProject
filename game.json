@@ -37,10 +37,7 @@
 						"Eat him": [
 							"You eat him. He tastes very good. Then you get indigestion and die.`CONSTIPATION ENDING"
 						]
-					},
-					"?????": [
-						"The Cuboid looks up. What happened, %(name)s? How did he know your name?`SCARY FOURTH WALL ENDING"
-					]
+					}
 				},
 				"Lie down and cry": [
 					"You get so sad that you commit suicide.`SEVERE DEPRESSION ENDING"
@@ -64,7 +61,7 @@
 			"Stick up your middle finger": [
 				"The Cuboid tries to roar, but then he remembers that he doesn't have a mouth. He flails, and knocks you over and you impale yourself on your middle finger.`DEATH-BY-FINGER ENDING"
 			],
-			"Run Away": {
+			"Run away": {
 				"You run away, and then bump into The Great Enoch, The Great Felix, and The Great Lawrence.": null,
 				"Run back to The Headless Cuboid": [
 					"The giants chase you, and discover The Headless Cuboid. They then take turns biting your head off.`ANGERED GIANTS ENDING"
@@ -75,6 +72,14 @@
 			},
 			"Ascend to heaven": [
 				"You ascend to heaven, but God denies you and you die of bubonic plague for no good reason at all.`FAILED HEAVEN ENDING"
+			]
+		},
+		"Detonate": {
+			"You attempt to explode, but fail. The Cuboid looks at you confusdedly.": null,
+			"Attempt to detonate again": "",
+			"Scream in rage": "",
+			"Faint for no reason": [
+				"You faint. The Cuboid eats you.`UNCONSCIOUS ENDING"
 			]
 		}
 	},
