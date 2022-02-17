@@ -105,7 +105,7 @@
 				"Violently eat your other pizza": {
 					"You eat your pizza so violently that inordinate amounts of electromagnetic radiation are released into space. Suddenly, a UFO appears above you.": null,
 					"Pull out the handheld CIWS you always have for circumstances like this": {
-						"You pull out your CIWS. Oh, no, wait, that's my 20 megawatt CW handheld laser. You grab you CIWS and... the gun jams.": null,
+						"You pull out your CIWS. Oh, no, wait, that's my 20 megawatt CW handheld laser. You grab your CIWS and... the gun jams.": null,
 						"Frick.": [
 							"Frick. You say it out loud. You repeat it, until The Great Cuboid gets bored and stomps you.`JAMMED GUN ENDING"
 						],
@@ -118,7 +118,9 @@
 								"You miss your shot. The aliens notice, and blast you to shreds.`MISSED LASER ENDING"
 							]
 						},
-						"Fumble for any other weapons you might have": ""
+						"Fumble for any other weapons you might have": [
+							"You fumble for weapons so hard you fall over and die.`WTF ENDING"
+						]
 					},
 					"Signal the aliens down": [
 						"Apparently, waving in alien culture is an insult. Gun ports open and blast you to shreds.`MISCOMMUNICATION ENDING"
