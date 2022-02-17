@@ -1,0 +1,7 @@
+# PyInstaller and other trash
+*.spec
+**/__pycache__/
+__freeze__.bat
+
+# Test
+test.*

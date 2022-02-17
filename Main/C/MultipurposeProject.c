@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 int main()
 {
@@ -21,12 +22,20 @@ int main()
 		char input;
 		scanf("%c", &input);
 		
+		chdir("..\\\\..");
 		if(input == 'C' || input == 'c')
 		{
 			
 			printf("\n\n");
-			(void)system("C:/MultipurposeProject/C-Calculator/EXE/C-Calculator.exe");
+			(void)system("C_Calculator\\\\EXE\\\\C_Calculator.exe");
 			return(0);
+			
+		}
+		else if(input == 'F' || input == 'f')
+		{
+			
+			(void)system("run.bat");
+			exit(0);
 			
 		}
 		
