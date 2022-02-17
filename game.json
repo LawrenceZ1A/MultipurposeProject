@@ -111,7 +111,8 @@
 			"Lawrence lectures The Great Cuboid to death.'LECTURE-TO-DEATH ENDING"
 		],
 		"Ask him to play KSP and yell at The Great Cuboid": {
-			"Lawrence whips out his desktop from his man-pouch and opens KSP, The Great Cuboid is now addicted": {
+			"Lawrence whips out his desktop from his man-pouch and opens KSP, The Great Cuboid is now addicted": null
+				"What will you do": {
 				"Kill The Great Cuboid while he is distracted": [
 					"You kill him and instead you hit the desktop, The Cuboid is VERY ANGERY and kills you. 'BROKEN-KSP ENDING"
 				]
