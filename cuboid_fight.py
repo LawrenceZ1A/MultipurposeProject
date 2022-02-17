@@ -13,7 +13,11 @@ from tkinter import *
 from getpass import getuser
     
 #Loading game
-with open("game.json", "r", encoding="utf") as f:
+with open(
+    "game.json",
+    "r",
+    encoding="utf"
+) as f:
     data = json.load(f)
     ldata = list(data)
 
@@ -55,8 +59,16 @@ def reset(*args, **kwargs):
     """Reset game"""
     global cdata, cldata, data, ldata, var, var2
     var.set("a")
-    var2 = "Reset"
-    cdata, cldata = data, ldata
+    var2 = "[===Reset===]"
+    
+    with open(
+        "game.json",
+        "r",
+        encoding="utf"
+    ) as f:
+        data = json.load(f)
+        ldata = list(data)
+        cdata, cldata = data, ldata
     
 def button(texts, tbox):
     """Put button"""
@@ -64,20 +76,20 @@ def button(texts, tbox):
     
     select = []
     for text in texts:
-        if (text != "Reset"):
-            temp = Button(
-                master,
-                text=str(text),
-                command=lambda i=text: selecta(
-                    i
-                )
-            )
-            
-        else:
+        if (text == "[===Reset===]"):
             temp = Button(
                 master,
                 text=str(text),
                 command=lambda i=text: reset(
+                    i
+                )
+            )
+        
+        else:
+            temp = Button(
+                master,
+                text=str(text),
+                command=lambda i=text: selecta(
                     i
                 )
             )
@@ -119,11 +131,11 @@ while True:
         #If at ending
         enda = textbox("`".join(cldata[0].split("`")[:~0]))
         endb = textbox(cldata[0].split("`")[~0])
-        temp = button(["Reset"], EndDummy(enda, endb))
+        temp = button(["[===Reset===]"], EndDummy(enda, endb))
         
     tbox = textbox(cldata[0])
-    temp = button(cldata[1:] + ["Reset"], tbox)
+    temp = button(cldata[1:] + ["[===Reset===]"], tbox)
     
-    if str(temp) != "Reset":
+    if str(temp) != "[===Reset===]":
         cdata = cdata[temp]
         cldata = list(cdata)

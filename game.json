@@ -79,7 +79,55 @@
 			"Attempt to detonate again": [
 				"You detonated so hard that you broke the game, %(name)s. Very rude.`CmDmxoYTqbzfsJIsixGRueLEGpRsmrMzJoNCHdnDHPTVjqmaLcNAOpjssYxMimoijKBGK"
 			],
-			"Scream in rage": "",
+			"Scream in rage": {
+				"You scream and flatten all the trees around you. The forest turns into a plains.": null,
+				"Look around in wonder": {
+					"You look around, and see The Great Lawrence, The Great Enoch, and The Great Felix running towards you.": null,
+					"Die": {
+						"Die ": null,
+						"Die": {
+							"Die ": null,
+							"Die": {
+								"Die ": null,
+								"Die": {
+									"Die ": null,
+									"Die": [
+										"Die`DIE"
+									]
+								}
+							}
+						}
+					}
+				},
+				"Stomp": [
+					"You stomp so hard that you trigger an earthquake. Then you get crushed by a rock.`EARTHQUAKE ENDING"
+				],
+				"Violently eat your other pizza": {
+					"You eat your pizza so violently that inordinate amounts of electromagnetic radiation are released into space. Suddenly, a UFO appears above you.": null,
+					"Pull out the handheld CIWS you always have for circumstances like this": {
+						"You pull out your CIWS. Oh, no, wait, that's my 20 megawatt CW handheld laser. You grab you CIWS and... the gun jams.": null,
+						"Frick.": [
+							"Frick. You say it out loud. You repeat it, until The Great Cuboid gets bored and stomps you.`JAMMED GUN ENDING"
+						],
+						"Use the laser instead": {
+							"You shoot the laser at the ship. Pick a number. One will succeed, one won't.": null,
+							"0": [
+								"You hit, and the aliens ship is penetrated. You hit the engine, and it explodes the Great Cuboid.`DESTROYED ALIENS ENDING"
+							],
+							"1": [
+								"You miss your shot. The aliens notice, and blast you to shreds.`MISSED LASER ENDING"
+							]
+						},
+						"Fumble for any other weapons you might have": ""
+					},
+					"Signal the aliens down": [
+						"Apparently, waving in alien culture is an insult. Gun ports open and blast you to shreds.`MISCOMMUNICATION ENDING"
+					],
+					"Dig a hole": [
+						"You dig a hole. You jump in the hole and the hole collapses and you asphyxiate in mud.`MUD ENDING"
+					]
+				}
+			},
 			"Faint for no reason": [
 				"You faint. The Cuboid eats you.`UNCONSCIOUS ENDING"
 			]
