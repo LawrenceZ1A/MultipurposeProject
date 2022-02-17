@@ -1,2 +1,2 @@
 @ECHO OFF
-PyPy\pypy.exe cuboid_fight.py
+pypy\pypy.exe cuboid_fight.py
