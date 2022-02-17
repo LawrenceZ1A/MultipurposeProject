@@ -76,7 +76,9 @@
 		},
 		"Detonate": {
 			"You attempt to explode, but fail. The Cuboid looks at you confusdedly.": null,
-			"Attempt to detonate again": "",
+			"Attempt to detonate again": [
+				"You detonated so hard that you broke the game, %(name)s. Very rude.`CmDmxoYTqbzfsJIsixGRueLEGpRsmrMzJoNCHdnDHPTVjqmaLcNAOpjssYxMimoijKBGK"
+			],
 			"Scream in rage": "",
 			"Faint for no reason": [
 				"You faint. The Cuboid eats you.`UNCONSCIOUS ENDING"

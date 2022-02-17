@@ -13,7 +13,7 @@ from tkinter import *
 from getpass import getuser
     
 #Loading game
-with open("game.json", "r") as f:
+with open("game.json", "r", encoding="utf") as f:
     data = json.load(f)
     ldata = list(data)
 
@@ -106,7 +106,14 @@ class EndDummy:
 #Mainloop
 while True:
     #Filters
-    cldata[0] = cldata[0].replace("%(name)s", getuser().title())
+    cdtype = str(type(cdata))
+    if cdtype == "<class 'dict'>":
+        cdata = {k.replace("%(name)s", getuser().title()):v for k,v in cdata.items()}
+        
+    elif cdtype == "<class 'list'>":
+        cdata = [i.replace("%(name)s", getuser().title()) for i in cdata]
+        
+    cldata = list(cdata)
     
     if cdata == cldata:
         #If at ending
