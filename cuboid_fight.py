@@ -1,3 +1,6 @@
+#Source code of CTE
+print("Starting...")
+
 #Imports
 try:
     import ujson as json
@@ -5,7 +8,7 @@ try:
 except (ModuleNotFoundError, ImportError):
     try:
         import simplejson as json
-        
+
     except (ModuleNotFoundError, ImportError):
         import json
         
@@ -21,12 +24,45 @@ with open(
     data = json.load(f)
     ldata = list(data)
 
+default = {
+    "color": "#000000",
+    "width": "1280",
+    "height": "720",
+    "title": "FooBar",
+    "resizeable": False
+}
+try:
+    with open(
+        "config.json",
+        "r",
+        encoding="utf"
+    ) as f:
+        try:
+            configt, config = json.load(f), {}
+            
+            n = "color"; config[n] = str(configt.get(n, "#000000"))
+            n = "width"; config[n] = str(configt.get(n, "1280"))
+            n = "height"; config[n] = str(configt.get(n, "720"))
+            n = "title"; config[n] = str(configt.get(n, "FooBar"))
+            n = "resizeable"; config[n] = bool(configt.get(n, False))
+            
+            del configt, n
+            
+        except Exception as error:
+            print("Config file was invalid. Use JSONlint to find the problem.")
+            print("In case of improper error, check following message. " + type(error).__name__ + ": " + str(error))
+            config = default
+        
+except FileNotFoundError:
+    print("Config file was not found.")
+    config = default
+
 #Creating window
 master = Tk()
-master["background"] = "#01FEAA"
-master.geometry("720x480")
-master.title("Fighting Cuboid")
-master.resizable(False, False)
+master["background"] = config["color"]
+master.geometry(config["width"] + "x" + config["height"])
+master.title(config["title"])
+master.resizable(config["resizeable"], config["resizeable"])
 
 #Creating variables and stuff
 cdata, cldata = data, ldata
@@ -116,6 +152,7 @@ class EndDummy:
             item.destroy()
 
 #Mainloop
+print("Running mainloop!")
 while True:
     #Filters
     cdtype = str(type(cdata))
