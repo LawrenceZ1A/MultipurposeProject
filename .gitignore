@@ -5,3 +5,6 @@ __freeze__.bat
 
 # Test
 test.*
+
+# My stuff
+.packignore
