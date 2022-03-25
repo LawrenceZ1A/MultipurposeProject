@@ -31,9 +31,24 @@ int main()
 			return(0);
 			
 		}
-		else if(input == 'F' || input == 'f')
+		else if(input == 'T' || input == 't')
 		{
 			
+			(void)system("CPSTest\\\\CPSTest.exe");
+			exit(0);
+			
+		}
+		else if(input == 'W' || input == 'w')
+		{
+			
+			(void)system("run.bat");
+			exit(0);
+			
+		}
+		else if(input == 'M' || input == 'm')
+		{
+			
+			system("explorer https://download1075.mediafire.com/96tn9fs667qg/o5vulvu8prylrgx/EVGO.PNG");
 			exit(0);
 			
 		}
