@@ -48,7 +48,7 @@ int main()
 		else if(input == 'M' || input == 'm')
 		{
 			
-			system("explorer https://download1075.mediafire.com/96tn9fs667qg/o5vulvu8prylrgx/EVGO.PNG");
+			system("Keras\\\\dist\\\\how-to-forecast\\\\how-to-forecast.exe");
 			exit(0);
 			
 		}
