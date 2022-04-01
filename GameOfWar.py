@@ -66,6 +66,17 @@ elif do=="scream":
                 if do=="accuse red":
                     print("everyone agrees. red was an imposter")
                     print("what do you want to do?")
+                    print("accuse black, accuse green".lower)
+                    do=input(">").lower()
+                    if do=="accuse black":
+                        print("black is accused. He was ejected and he was an imposter. You win")
+                        print("VICTORY ENDING")
+                    elif do=="accuse green":
+                        print("You were wrong. They ejected you instead. You are mad-sad")
+                        print("MAD-SAD ENDING")
+                    else:
+                        print("That wasn't an option!! Your were hit")
+                        print("NOT AN OPTION ENDING")
                 elif do=="say sus":
                     print("everyone looks at YOU until you faint because of awkardness")
                     print("FAINT OF AWKWARDNESS ENDING")
@@ -185,9 +196,14 @@ elif do=="start talking about orbital mechanics":
                 print("lawrence and foolishmortal get angry about your interruption. they swell to 100 times there normal size and they step on you")
                 print("STOMPED ENDING")
             elif do=="let the fight happen":
-                print("it was an epic fight that lasted 4.827 hours. ")
+                print("it was an epic fight that lasted 4.827 hours.")
                 print("foolishmortal and lawrence are both injured")
                 print("what do you do?")
+                print("help foolishmortal, help lawrence")
+                do=input(">").lower()
+                if do=="help foolishmortal":
+                    print("you help foolishmortal. lawrence is offended. he launches rockets at you.")
+                    print("ROCKETS ENDING")
             else:
                 print("That wasn't an option!! Your were hit")
                 print("NOT AN OPTION ENDING")
