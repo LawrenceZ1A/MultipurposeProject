@@ -204,6 +204,12 @@ elif do=="start talking about orbital mechanics":
                 if do=="help foolishmortal":
                     print("you help foolishmortal. lawrence is offended. he launches rockets at you.")
                     print("ROCKETS ENDING")
+                elif do=="help lawrence":
+                    print("you help lawrence. foolishmortal is offended. he makes you to foolish to exist")
+                    print("FOOLISH ENDING")
+                else:
+                    print("That wasn't an option!! Your were hit")
+                    print("NOT AN OPTION ENDING")
             else:
                 print("That wasn't an option!! Your were hit")
                 print("NOT AN OPTION ENDING")
@@ -219,3 +225,4 @@ elif do=="start talking about orbital mechanics":
 else:
     print("That wasn't an option!! Your were hit")
     print("NOT AN OPTION ENDING")
+while 1:0
