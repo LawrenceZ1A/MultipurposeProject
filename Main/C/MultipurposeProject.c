@@ -19,11 +19,11 @@ int main()
 	while(true)
 	{
 		
-		char input1;
-		scanf("%c", &input1);
+		char input;
+		scanf("%c", &input);
 		
 		chdir("..\\\\..");
-		if(input1 == 'C' || input1 == 'c')
+		if(input == 'C' || input == 'c')
 		{
 			
 			printf("\n\n");
@@ -31,21 +31,21 @@ int main()
 			return(0);
 			
 		}
-		else if(input1 == 'T' || input1 == 't')
+		else if(input == 'T' || input == 't')
 		{
 			
 			(void)system("CPSTest\\\\CPSTest.exe");
 			exit(0);
 			
 		}
-		else if(input1 == 'W' || input1 == 'w')
+		else if(input == 'W' || input == 'w')
 		{
 			
 			(void)system("run.bat");
 			exit(0);
 			
 		}
-		else if(input1 == 'M' || input1 == 'm')
+		else if(input == 'M' || input == 'm')
 		{
 
 			system("Keras\\\\dist\\\\how-to-forecast\\\\how-to-forecast.exe");
