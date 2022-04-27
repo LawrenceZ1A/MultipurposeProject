@@ -41,14 +41,14 @@ int main()
 		else if(input == 'W' || input == 'w')
 		{
 			
-			(void)system("run.bat");
+			(void)system("run1.bat");
 			exit(0);
 			
 		}
 		else if(input == 'M' || input == 'm')
 		{
 
-			system("Keras\\\\dist\\\\how-to-forecast\\\\how-to-forecast.exe");
+			(void)system("run2.bat");
 			exit(0);
 			
 		}
