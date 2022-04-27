@@ -13,7 +13,8 @@ int main()
 	printf("Now, please establish which multipurpose project you would like to use:\n");
 	printf("C (C-Calculator)\n");
 	printf("T (CPSTest)\n");
-	printf("W (The Game of War)\n\n");
+	printf("W (The Game of War)\n");
+	printf("M (Machine Learning)\n\n");
 	
 	while(true)
 	{
@@ -40,7 +41,14 @@ int main()
 		else if(input == 'W' || input == 'w')
 		{
 			
-			(void)system("run.bat");
+			(void)system("run1.bat");
+			exit(0);
+			
+		}
+		else if(input == 'M' || input == 'm')
+		{
+
+			(void)system("run2.bat");
 			exit(0);
 			
 		}
