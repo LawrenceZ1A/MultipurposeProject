@@ -34,7 +34,7 @@ int main()
 		else if(input == 'T' || input == 't')
 		{
 			
-			(void)system("CPSTest\\\\CPSTest.exe");
+			system("start https://onesquareminesweeper.com/");
 			exit(0);
 			
 		}
