@@ -62,12 +62,12 @@ df_log.head()
 # In[232]:
 
 
-simulation_size = 2
+simulation_size = 15
 num_layers = 1
-size_layer = 128
+size_layer = 256
 timestamp = 5
-epoch = 300
-dropout_rate = 0.8
+epoch = 500
+dropout_rate = 1
 test_size = 30
 learning_rate = 0.005
 
