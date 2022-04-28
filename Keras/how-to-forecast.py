@@ -29,17 +29,22 @@ tf.compat.v1.set_random_seed(1234)
 tf.compat.v1.disable_v2_behavior()
 
 
+
 # In[230]:
+print("It will save the data in the same folder as the script")
+symbol = input('Please input stock symbol: \n')
+
+symbol = symbol.upper()
 
 
 def get_minute_history_data(symbol, start_date:date, end_date:date):
     ticker = yf.Ticker(symbol)
-    df_data = ticker.history(interval="5m",start=str(start_date),end=str(end_date))
+    df_data = ticker.history(interval="1d",start=str(start_date),end=str(end_date))
     df_data = df_data.round(2)
     return df_data
-Symbol = "WAL"
-start_date = date(2022,2,14) 
-end_date = date(2022,2,24) 
+Symbol = symbol
+start_date = date(2021,4,27) 
+end_date = date(2022,4,27) 
 df = get_minute_history_data(Symbol, start_date, end_date)
 df = df.reset_index()
 df
@@ -57,13 +62,13 @@ df_log.head()
 # In[232]:
 
 
-simulation_size = 15
+simulation_size = 2
 num_layers = 1
 size_layer = 128
 timestamp = 5
 epoch = 300
 dropout_rate = 0.8
-test_size = 97
+test_size = 30
 learning_rate = 0.005
 
 df_train = df_log
@@ -189,7 +194,7 @@ def forecast():
         )
         output_predict[upper_b + 1 : df_train.shape[0] + 1] = out_logits
         future_day -= 1
-        date_ori.append(date_ori[-1] + timedelta(minutes = 5))
+        date_ori.append(date_ori[-1] + timedelta(days = 1))
 
     init_value = last_state
 
@@ -204,7 +209,7 @@ def forecast():
         )
         init_value = last_state
         output_predict[-future_day + i] = out_logits[-1]
-        date_ori.append(date_ori[-1] + timedelta(minutes = 5))
+        date_ori.append(date_ori[-1] + timedelta(days = 1))
 
     output_predict = minmax.inverse_transform(output_predict)
     deep_future = anchor(output_predict[:, 0], 0.4)
@@ -225,11 +230,8 @@ for i in range(simulation_size):
 
 
 date_ori = pd.to_datetime(df.iloc[:, 0]).tolist()
-for i in range(test_size):
-    if(i == 0):
-        date_ori.append(date_ori[-1] + timedelta(hours = 17, minutes = 30))
-    else:  
-        date_ori.append(date_ori[-1] + timedelta(minutes = 5))
+for i in range(test_size): 
+    date_ori.append(date_ori[-1] + timedelta(days = 1))
 date_ori = pd.Series(date_ori).dt.strftime(date_format = '%Y-%m-%d %H:%M:%S').tolist()
 date_ori[-5:]
 
@@ -257,7 +259,8 @@ plt.legend()
 plt.title('average accuracy: %.4f'%(np.mean(accuracies)))
 
 x_range_future = np.arange(len(results[0]))
-plt.xticks(x_range_future[::96], date_ori[::96])
+plt.xticks(x_range_future[::30], date_ori[::30])
 
+plt.savefig(symbol + '.png')
 plt.show()
 
