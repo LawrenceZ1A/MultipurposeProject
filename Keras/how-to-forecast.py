@@ -32,22 +32,21 @@ tf.compat.v1.disable_v2_behavior()
 
 # In[230]:
 print("It will save the data in the same folder as the script")
-symbol = input('Please input stock symbol: \n')
-
-symbol = symbol.upper()
+symbol = input('Please input stock symbol:\n').upper()
 
 
 def get_minute_history_data(symbol, start_date:date, end_date:date):
     ticker = yf.Ticker(symbol)
-    df_data = ticker.history(interval="1d",start=str(start_date),end=str(end_date))
+    df_data = ticker.history(interval="1d", start=str(start_date), end=str(end_date))
     df_data = df_data.round(2)
     return df_data
+
 Symbol = symbol
-start_date = date(2021,4,27) 
-end_date = date(2022,4,27) 
+now = datetime.datetime.now()
+start_date = date(now.year - 5, now.month, now.day)
+end_date = date(now.year, now.month, now.day)
 df = get_minute_history_data(Symbol, start_date, end_date)
 df = df.reset_index()
-df
 
 
 # In[231]:
@@ -62,7 +61,7 @@ df_log.head()
 # In[232]:
 
 
-simulation_size = 15
+simulation_size = 5
 num_layers = 1
 size_layer = 256
 timestamp = 5
@@ -222,7 +221,7 @@ def forecast():
 
 results = []
 for i in range(simulation_size):
-    print('simulation %d'%(i + 1))
+    print('simulation %d' % (i + 1))
     results.append(forecast())
 
 
@@ -230,9 +229,9 @@ for i in range(simulation_size):
 
 
 date_ori = pd.to_datetime(df.iloc[:, 0]).tolist()
-for i in range(test_size): 
-    date_ori.append(date_ori[-1] + timedelta(days = 1))
-date_ori = pd.Series(date_ori).dt.strftime(date_format = '%Y-%m-%d %H:%M:%S').tolist()
+for i in range(test_size):
+    date_ori.append(date_ori[-1] + timedelta(days=1))
+date_ori = pd.Series(date_ori).dt.strftime(date_format='%Y-%m-%d %H:%M:%S').tolist()
 date_ori[-5:]
 
 
@@ -241,7 +240,19 @@ date_ori[-5:]
 
 accepted_results = []
 for r in results:
-    if (np.array(r[-test_size:]) < np.min(df['Close'])).sum() == 0 and     (np.array(r[-test_size:]) > np.max(df['Close']) * 2).sum() == 0:
+    if (
+        np.array(
+            r[-test_size:]
+        ) < np.min(
+            df['Close']
+        )
+    ).sum() == 0 and (
+        np.array(
+            r[-test_size:]
+        ) > np.max(
+            df['Close']
+        ) * 2
+    ).sum() == 0:
         accepted_results.append(r)
 len(accepted_results)
 
@@ -251,10 +262,10 @@ len(accepted_results)
 
 accuracies = [calculate_accuracy(df['Close'].values, r[:-test_size]) for r in accepted_results]
 
-plt.figure(figsize = (15, 5))
+plt.figure(figsize=(15, 5))
 for no, r in enumerate(accepted_results):
-    plt.plot(r, label = 'forecast %d'%(no + 1))
-plt.plot(df['Close'], label = 'true trend', c = 'black')
+    plt.plot(r, label='forecast %d'%(no + 1))
+plt.plot(df['Close'], label='true trend', c='black')
 plt.legend()
 plt.title('average accuracy: %.4f'%(np.mean(accuracies)))
 
@@ -263,4 +274,3 @@ plt.xticks(x_range_future[::30], date_ori[::30])
 
 plt.savefig(symbol + '.png')
 plt.show()
-
