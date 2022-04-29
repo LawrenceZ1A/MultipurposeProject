@@ -12,7 +12,7 @@ int main()
 	printf("If you would like to input, press the required key, then press enter.\n\n");
 	printf("Now, please establish which multipurpose project you would like to use:\n");
 	printf("C (C-Calculator)\n");
-	printf("T (CPSTest)\n");
+	printf("N (Cuboid News)\n");
 	printf("W (The Game of War)\n");
 	printf("M (Machine Learning)\n\n");
 	
@@ -31,10 +31,10 @@ int main()
 			return(0);
 			
 		}
-		else if(input == 'T' || input == 't')
+		else if(input == 'N' || input == 'n')
 		{
 			
-			system("start https://onesquareminesweeper.com/");
+			(void)system("CuboidNews\\\\CuboidNews.exe");
 			exit(0);
 			
 		}
