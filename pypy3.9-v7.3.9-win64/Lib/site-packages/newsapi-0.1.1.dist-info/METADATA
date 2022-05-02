@@ -1,0 +1,13 @@
+Metadata-Version: 2.0
+Name: newsapi
+Version: 0.1.1
+Summary: A python wrapper for News API (newsapi.org)
+Home-page: https://github.com/slapbot/newsapi
+Author: Ujjwal Gupta
+Author-email: ugupta41@gmail.com
+License: MIT
+Requires-Dist: requests
+
+**********
+
+
