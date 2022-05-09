@@ -41,14 +41,14 @@ int main()
 		else if(input == 'W' || input == 'w')
 		{
 			
-			(void)system("run1.bat");
+			(void)system("GameOfWar.exe");
 			exit(0);
 			
 		}
 		else if(input == 'M' || input == 'm')
 		{
 
-			(void)system("run2.bat");
+			(void)system("run.bat");
 			exit(0);
 			
 		}
