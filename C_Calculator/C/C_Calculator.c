@@ -18,7 +18,7 @@ void Add()
 	printf("%lf", output);
 	printf("\n\n\n");
 	
-	main();
+	int main();
 	
 }
 
@@ -38,7 +38,7 @@ void Subtract()
 	printf("%lf", output);
 	printf("\n\n\n");
 	
-	main();
+	int main();
 	
 }
 
@@ -58,7 +58,7 @@ void Multiply()
 	printf("%lf", output);
 	printf("\n\n\n");
 	
-	main();
+	int main();
 	
 }
 
@@ -78,7 +78,7 @@ void Divide()
 	printf("%lf", output);
 	printf("\n\n\n");
 	
-	main();
+	int main();
 	
 }
 
@@ -98,7 +98,7 @@ void Exponentiate()
 	printf("%lf", output);
 	printf("\n\n\n");
 	
-	main();
+	int main();
 	
 }
 
@@ -118,7 +118,7 @@ void Root()
 	printf("%lf", output);
 	printf("\n\n\n");
 	
-	main();
+	int main();
 	
 }
 

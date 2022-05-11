@@ -48,7 +48,7 @@ int main()
 		else if(input == 'M' || input == 'm')
 		{
 
-			(void)system("run.bat");
+			(void)system("Keras\\\\dist\\\\how-to-forecast\\\\how-to-forecast.exe");
 			exit(0);
 			
 		}
