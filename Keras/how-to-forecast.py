@@ -20,8 +20,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
-from datetime import datetime, date, time
-from datetime import timedelta
+from datetime import datetime, date, time, timedelta
+
 from tqdm import tqdm
 import yfinance as yf
 sns.set()
@@ -42,7 +42,7 @@ def get_minute_history_data(symbol, start_date:date, end_date:date):
     return df_data
 
 Symbol = symbol
-now = datetime.datetime.now()
+now = datetime.now()
 start_date = date(now.year - 5, now.month, now.day)
 end_date = date(now.year, now.month, now.day)
 df = get_minute_history_data(Symbol, start_date, end_date)
@@ -95,6 +95,7 @@ class Model:
             [lstm_cell(size_layer) for _ in range(num_layers)],
             state_is_tuple = False,
         )
+        
         self.X = tf.compat.v1.placeholder(tf.float32, (None, None, size))
         self.Y = tf.compat.v1.placeholder(tf.float32, (None, output_size))
         drop = tf.compat.v1.nn.rnn_cell.DropoutWrapper(
